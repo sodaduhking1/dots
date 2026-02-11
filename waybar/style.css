@@ -4,24 +4,20 @@ window#waybar {
     border-top: 1px solid #004d99;
     color: white;
     font-family: "Tahoma", "sans-serif";
-    font-size: 13px;
+    font-size: 11px;
 }
 
 /* The Green Start Button with XP Logo */
 #custom-start {
-    /* Combined both to ensure the green gradient and logo render together */
     background: 
         url("file:///home/soda/menu.png") no-repeat 8px center / 18px 18px,
         linear-gradient(180deg, #53bd53 0%, #6cce6c 10%, #3e9e3e 20%, #3e9e3e 80%, #2a822a 100%);
-
-    /* Padding adjustment: Space for logo on the left */
     padding: 0 15px 0 35px; 
     margin-right: 5px;
     border-radius: 0 10px 10px 0;
-    
     font-weight: bold;
     font-style: italic;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     box-shadow: inset 1px 1px 1px rgba(255,255,255,0.4);
 }
 
@@ -33,13 +29,21 @@ window#waybar {
     color: white;
     margin: 3px 2px;
     padding: 0 8px;
-    min-width: 120px;
+    /* Removed max-width to fix the error */
+    min-width: 140px; 
     transition: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Space out the icon specifically */
+#taskbar button image {
+    margin-right: 6px;
+    margin-left: 2px;
 }
 
 #taskbar button.active {
-    background: #1c52b5; /* Sunken look for active window */
-    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.3);
+    background: #1c52b5; 
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.4);
 }
 
 #taskbar button:hover {
@@ -57,3 +61,6 @@ window#waybar {
     font-weight: normal;
 }
 
+#tray {
+    border-left: 2px solid rgba(255,255,255,0.2);
+}

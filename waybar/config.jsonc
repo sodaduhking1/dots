@@ -13,16 +13,17 @@
     },
 
     "wlr/taskbar": {
-        "format": "{title}",
-        "icon-size": 18,
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": [],
-        "rewrite": {
-            "Firefox": "Internet Explorer",
-            "Kitty": "Command Prompt"
-        }
-    },
+    "format": "{icon} {title}", // Added {icon} here
+    "icon-size": 18,
+    "icon-theme": "Windows-XP", // Optional: specify your XP icon theme name here
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [],
+    "rewrite": {
+        "Firefox": "Internet Explorer",
+        "Kitty": "Command Prompt"
+    }
+},
 
     "clock": {
         "format": "{:%I:%M %p}",
