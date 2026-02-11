@@ -1,0 +1,33 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 30,
+    "modules-left": ["custom/start", "wlr/taskbar"],
+    "modules-center": [],
+    "modules-right": ["tray", "clock"],
+
+    "custom/start": {
+        "format": "Start",
+        "on-click": "/home/soda/.config/rofi/launchers/launcher.sh",
+        "tooltip": false
+    },
+
+    "wlr/taskbar": {
+        "format": "{title}",
+        "icon-size": 18,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [],
+        "rewrite": {
+            "Firefox": "Internet Explorer",
+            "Kitty": "Command Prompt"
+        }
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%A, %B %d, %Y}"
+    }
+}
+
+
