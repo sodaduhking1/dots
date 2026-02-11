@@ -1,88 +1,97 @@
-/**
- * Windows XP Luna Theme for Rofi
- * Place in ~/.config/rofi/config.rasi
- */
-
 configuration {
     modi: "drun";
-    font: "Tahoma 11"; /* Classic Windows XP Font */
+    font: "Tahoma 11";
     show-icons: true;
-    icon-theme: "WinXP"; /* Assumes you have an XP-style icon pack installed */
-    display-drun: "Start";
-    drun-display-format: "{name}";
-    location: 7;         /* Bottom Left */
-    anchor: south west;  /* Anchor to bottom left */
-    xoffset: 10;         /* Offset from screen edge */
-    yoffset: -40;        /* Align above your taskbar */
+    icon-theme: "WinXP";
+    display-drun: "Soda"; 
+    location: 7;
+    anchor: south west;
+    xoffset: 5;
+    yoffset: -45;
 }
 
 * {
-    /* Luna Blue Color Palette */
-    xp-blue-dark:   #245EDB;
-    xp-blue-light:  #316AC5;
-    xp-beige:       #ECE9D8;
-    xp-orange:      #F68F32;
-    xp-text:        #000000;
-    xp-white:       #FFFFFF;
-
+    xp-blue:          #245EDB;
+    xp-right-pane:    #D3E5FA; 
+    xp-white:         #FFFFFF;
+    xp-orange:        #F68F32;
+    xp-border-blue:   #003399;
+    xp-sel-blue:      #316AC5;
     background-color: transparent;
-    text-color:       @xp-text;
+    text-color:       #000000;
 }
 
 window {
-    background-color: @xp-beige;
+    background-color: @xp-white;
     border:           2px;
-    border-color:     @xp-blue-dark;
-    width:            350px;
-    height:           500px;
-    children:         [ "inputbar", "listview" ];
+    border-color:     @xp-border-blue;
+    border-radius:    5px 5px 0px 0px;
+    width:            420px;
+    children:         [ "inputbar", "listview", "mode-switcher" ];
 }
 
 inputbar {
-    background-color: @xp-blue-dark;
-    text-color:       @xp-white;
-    padding:          8px;
-    children:         [ "prompt", "entry" ];
+    background-color: @xp-blue;
+    padding:          12px 16px; 
+    border:           0px 0px 2px 0px;
+    border-color:     @xp-orange;
+    /* We tell the inputbar to render our custom icon-pfp element here */
+    children:         [ "icon-pfp", "prompt" ];
+}
+
+icon-pfp {
+    expand:           false;
+    /* Use the absolute path to your square 64x64 image */
+    filename:         "/home/soda/.config/rofi/images/pfp.png";
+    
+    /* size is the image, width/height is the container with the border */
+    size:             64px;
+    width:            70px;
+    height:           70px;
+
+    border:           3px;
+    border-color:     #FFFFFF;
+    border-radius:    4px;
+    
+    margin:           0px 15px 0px 0px;
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
 }
 
 prompt {
-    background-color: inherit;
-    text-color:       inherit;
-    font:             "Tahoma Bold 12";
-}
-
-entry {
-    background-color: inherit;
-    text-color:       inherit;
-    placeholder:      "Search programs...";
-    placeholder-color: #A0A0A0;
+    text-color:       #FFFFFF;
+    font:             "Tahoma Bold 16";
+    /* Centers the text vertically against the 64px image */
+    vertical-align:   0.5;
 }
 
 listview {
-    background-color: @xp-white;
-    margin:           5px;
-    border:           1px;
-    border-color:     #808080; /* Classic recessed border look */
+    background-color: @xp-right-pane;
+    padding:          0px;
     columns:          1;
     lines:            10;
+    fixed-height:     true;
 }
 
 element {
-    padding: 5px;
+    background-color: @xp-white;
+    padding:          6px;
+    margin:           0px 140px 0px 0px; 
+    border:           0px 1px 0px 0px;
+    border-color:     #919B9C;
 }
 
 element selected {
-    background-color: @xp-blue-light;
-    text-color:       @xp-white;
+    background-color: @xp-sel-blue;
+    text-color:       #FFFFFF;
 }
 
 element-icon {
     size: 32px;
-    padding: 0 10px 0 0;
+    padding: 0px 8px 0px 0px;
 }
 
-element-text {
-    vertical-align: 0.5;
-    text-color: inherit;
+mode-switcher {
+    background-color: @xp-blue;
+    padding: 4px;
 }
-
