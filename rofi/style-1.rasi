@@ -1,0 +1,88 @@
+/**
+ * Windows XP Luna Theme for Rofi
+ * Place in ~/.config/rofi/config.rasi
+ */
+
+configuration {
+    modi: "drun";
+    font: "Tahoma 11"; /* Classic Windows XP Font */
+    show-icons: true;
+    icon-theme: "WinXP"; /* Assumes you have an XP-style icon pack installed */
+    display-drun: "Start";
+    drun-display-format: "{name}";
+    location: 7;         /* Bottom Left */
+    anchor: south west;  /* Anchor to bottom left */
+    xoffset: 10;         /* Offset from screen edge */
+    yoffset: -40;        /* Align above your taskbar */
+}
+
+* {
+    /* Luna Blue Color Palette */
+    xp-blue-dark:   #245EDB;
+    xp-blue-light:  #316AC5;
+    xp-beige:       #ECE9D8;
+    xp-orange:      #F68F32;
+    xp-text:        #000000;
+    xp-white:       #FFFFFF;
+
+    background-color: transparent;
+    text-color:       @xp-text;
+}
+
+window {
+    background-color: @xp-beige;
+    border:           2px;
+    border-color:     @xp-blue-dark;
+    width:            350px;
+    height:           500px;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    background-color: @xp-blue-dark;
+    text-color:       @xp-white;
+    padding:          8px;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color: inherit;
+    text-color:       inherit;
+    font:             "Tahoma Bold 12";
+}
+
+entry {
+    background-color: inherit;
+    text-color:       inherit;
+    placeholder:      "Search programs...";
+    placeholder-color: #A0A0A0;
+}
+
+listview {
+    background-color: @xp-white;
+    margin:           5px;
+    border:           1px;
+    border-color:     #808080; /* Classic recessed border look */
+    columns:          1;
+    lines:            10;
+}
+
+element {
+    padding: 5px;
+}
+
+element selected {
+    background-color: @xp-blue-light;
+    text-color:       @xp-white;
+}
+
+element-icon {
+    size: 32px;
+    padding: 0 10px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}
+
