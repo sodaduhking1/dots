@@ -2,11 +2,13 @@
 yay
 # showcase
 =======================================================================================
-<img width="1920" height="1080" alt="screenshot-2026-02-11_23-22-58" src="https://github.com/user-attachments/assets/5b665be6-dfd3-48da-9b4c-ed8fbb67066c" />
+<img width="1920" height="1080" alt="screenshot-2026-02-12_21-07-15" src="https://github.com/user-attachments/assets/8317f534-bc2d-4dad-9e52-2e18c6c2d23b" />
 
-<img width="1920" height="1080" alt="screenshot-2026-02-11_23-23-41" src="https://github.com/user-attachments/assets/8da6511f-8af8-43ee-aa3e-2589d8d2930b" />
+<img width="1920" height="1080" alt="screenshot-2026-02-12_21-09-01" src="https://github.com/user-attachments/assets/0f82d4c3-00c3-473f-87e0-5f8983925b7d" />
 
-<img width="1920" height="1080" alt="screenshot-2026-02-11_23-23-59" src="https://github.com/user-attachments/assets/a0ba045a-d5ef-4920-bd7a-8c55f8b76b59" />
+<img width="1920" height="1080" alt="screenshot-2026-02-12_21-09-22" src="https://github.com/user-attachments/assets/f2e9a607-ae93-4916-bc59-8de05f391139" />
+
+<img width="1920" height="1080" alt="screenshot-2026-02-12_21-10-37" src="https://github.com/user-attachments/assets/ef77dab5-94d4-4b58-b0de-3645d33f811f" />
 
 ========================================================================================
 # pre-requsites
