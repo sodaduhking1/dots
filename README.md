@@ -23,3 +23,4 @@ the menu.png (thats the image for the start menu) is set to be in your home dir 
 also i never intended for anyone else to use these dots they're only on here because i need to back them up for my own reasons
 
 if i see this reuploaded on [r/unixporn](https://reddit.com/r/unixporn)
+# I will fuck you.
